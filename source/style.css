@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+
+
+@font-face {
+  font-family: magneto;
+  src: url("font/magneto.ttf");
+}
+
+@font-face {
+  font-family: calibri;
+  src: url("font/calibri.ttf");
+}
+
+/* Saytdagi barcha o'zgarishlarni amalga oshiruvchi qism */
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+/* Uning vazifasi nima ekanligini tushunmadim :( */
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+
+/* HTML bilan bog'liq barcha konfiguratsiyalar shu yerda */
+/* html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+} */
+
+html::-webkit-scrollbar {
+  width: 0rem;
+}
+
+body {
+  font-family: calibri;
+  color: rgb(0, 128, 255);
+}
+
+
+/* Ushbu qism barcha alohida qismlarning ko'rinishini belgilaydi */
+section {
+  padding: 5rem 10%;
+  background-color: rgba(255, 255, 255, 0.72);
+}
+
+/* Ushbu qism barcha sarlavhalar uchun yozilgan */
+.heading-link {
+  text-align: center;
+  background: url(../images/heading-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.heading-link h3 {
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: rgb(2, 133, 2);
+}
+
+.heading-link p {
+  font-size: 2rem;
+  line-height: 2;
+  color: rgb(0, 128, 255);
+}
+
+.heading-link p a {
+  color: rgb(0, 128, 255);
+}
+
+.heading-link p a:hover {
+  text-decoration: underline;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  color: rgb(64, 160, 255);
+}
+
+/* Ushbu qismda headerga bog'liq o'zgarishlar amalga oshiriladi */
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 128, 255, 0.72);
+  -webkit-box-shadow: 0 1rem 1rem rgb(255, 255, 255);
+          box-shadow: 0 0.5rem 1rem rgba(0, 128, 255, 0.4);
+  padding-left: 112px;
+  padding-right: 112px;
+  padding-top: 2.4%;
+  padding-bottom: 2.4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
+}
+
+.header .logo {
+  margin-right: auto;
+  font-family: magneto;
+  text-transform: capitalize;
+  color: rgb(224, 240, 255);
+  font-weight: bolder;
+}
+
+.header .logo:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 18px rgb(255, 255, 255);
+}
+
+
+.header .navbar {
+  position: relative;
+}
+
+.header .navbar #close-navbar {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  color: rgba(224, 240, 255);
+  display: none;
+}
+
+.header .navbar #close-navbar:hover {
+  color: white;
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+  /* -webkit-transform: rotate(90deg); */
+          /* transform: rotate(90deg); */
+}
+
+.header .navbar a {
+  margin-right: 2rem;
+  /* font-size: 28px; */
+  text-transform: capitalize;
+  color: rgb(224, 240, 255);
+}
+
+.header .navbar a:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.header .icons div {
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: rgb(224, 240, 255);
+  margin-left: 1.5rem;
+}
+
+.header .icons div:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.header #menu-btn {
+  display: none;
+}
+
+
+/* tushunmadim, u hech narsani o'zgartirmadi */
+.logo-container {
+  text-align: center;
+}
+
+.logo-container img {
+  height: 10rem;
+  pointer-events: none;
+}
+
+
+.project {
+  background-color: rgba(0, 128, 255, 0.5);
+  border: 1px solid rgb(0, 128, 255);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+#portfolio a {
+  color: rgb(255, 255, 255);
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: rgba(0, 128, 255, 0.32);
+  padding: 4%;
+  border-radius: 8px;
+  color: #fff;
+  resize: none;
+}
+
+#contact-form textarea {
+  height: 200px;
+  overflow: auto;
+}
+
+#contact-form textarea::-webkit-scrollbar {
+  display: none;
+}
+
+
+#contact-form button {
+  background-color: rgba(0, 128, 255, 0.32);
+  padding: 4%;
+  border-radius: 8px;
+  /* border: none; */
+  /* border-radius: 5px; */
+  cursor: pointer;
+  color: white;
+  border: 1px solid rgb(0, 128, 255);
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: rgb(224, 240, 255);
+}
+
+
+/* .swiper-container {
+  width: 80%;
+  height: auto;
+} */
+
+
+.swiper-slide {
+  margin-right: 20px;
+}
+
+.slide-card {
+  background-color: rgba(0, 128, 255, 0.2);
+  border-radius: 25%;
+  padding: 18%;
+  border: 1px solid rgb(0, 128, 255);
+}
+
+
+/* .swiper-slide img {
+  width: 100%;
+  height: auto;
+} */
+
+.cursor {
+  position:fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  pointer-events: none;
+  opacity: 1
+}
+
+.cursor__inner {
+  fill: none;
+  stroke: rgb(0, 128, 255);
+  stroke-width: 1px;
+  filter: drop-shadow(0px 0px 2px rgb(0, 128, 255));
+}
+
+/* Ushbu qismi kerak va u footer qismini qanday ko'rinishini belgilaydi */
+.footer {
+  background: rgba(0, 128, 255, 0.52);
+}
+
+.footer .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box h3 i {
+  color: #0eb516;
+}
+
+.footer .box-container .box .share {
+  margin-top: 1rem;
+}
+
+.footer .box-container .box .share a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  background-color: #0eb538;
+  color: #fff;
+  margin-right: .3rem;
+  text-align: center;
+}
+
+.footer .box-container .box .share a:hover {
+  background-color: #444;
+}
+
+.footer .box-container .box .link {
+  font-size: 1.7rem;
+  line-height: 2;
+  color: rgb(224, 240, 255);
+  padding: .5rem 0;
+  display: block;
+}
+
+.footer .box-container .box .link:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  text-decoration: underline;
+}
+
+.footer .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: rgb(224, 240, 255);
+  padding: 1rem 0;
+}
+
+
+.footer .credit {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: rgb(224, 240, 255);
+  border-top: 0.1rem solid rgb(64, 160, 255);
+}
+
+.footer .credit span {
+  color: rgb(0, 128, 255);
+}
+
+
+
+/* @medianing vazifasi har bir o'lcham uchun alohida ko'rinishni tayyorlash */
+@media (max-width: 1200px) {
+  .header {
+    padding: 2rem 5%;
+  }
+  section {
+    padding: 3rem 5%;
+  }
+}
+
+@media (max-width: 991px) {
+  
+  html {
+    font-size: 80%;
+  }
+  .header {
+    padding: 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cursor {
+    opacity: 0;
+  }
+
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: fixed;
+    top: 0;
+    right: -105%;
+    width: 80%;
+    background: rgba(0, 128, 255, 0.72);
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 1200;
+  }
+  .header .navbar #close-navbar {
+    display: block;
+  }
+  .header .navbar.active {
+    /* -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8); */
+            /* box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8); */
+    right: 0;
+  }
+  .header .navbar a {
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .home .slide .content h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 64%;
+  }
+  .heading {
+    font-size: 3rem;
+  }
+  .about .content .about-title {
+    font-size: 4rem;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  pre {
+    font-size: 5px;
+  }
+}
+
+
+/* Ushbu qism kod yoziladigan qismi qanday bo'lishini belgilab beradi */
+pre {
+    font-family: Courier, monospace;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    background-color: rgb(0, 18, 24);
+    color: rgb(242, 244, 255);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  background-image: url("picture/background_light.jpg");
+  filter: blur(12px);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
